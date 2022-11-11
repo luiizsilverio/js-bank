@@ -5,16 +5,19 @@ export class Conta {
     cliente;
     static qtdContas = 0;
 
-    constructor(saldoInicial, agencia, cliente) {
+    constructor(saldoInicial, agencia, cliente) {   
+        if (this.constructor === Conta) {
+            throw new Error('** Não é possível instanciar um objeto da classe Conta');
+        }
+             
         this.agencia = agencia;
         this.cliente = cliente;
         this._saldo = saldoInicial;
-        Conta.qtdContas ++;
+        Conta.qtdContas ++;        
     }
 
     sacar(valor) {
-        let taxa = 1;
-        return this._sacar(valor, taxa);
+        throw new Error("O método Sacar da conta é abstrato");
     }
 
     _sacar(valor, taxa) {

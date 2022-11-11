@@ -11,8 +11,7 @@ export class ContaCorrente extends Conta {
 
     sacar(valor) {
         let taxa = 1.1;
-        return super._sacar(valor, taxa);
-        }
+        return super._sacar(valor, taxa);        
     }
 }
 
