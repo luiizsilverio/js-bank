@@ -1,4 +1,4 @@
-import { Cliente } from "./cliente.js";
+import { Cliente } from "../cliente.js";
 
 export class Conta {
     agencia;
